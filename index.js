@@ -19,12 +19,12 @@ const events = [
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'bhaveshrgarg@gmail.com', // Replace with your email
-    pass: 'kklxsurjouwnproh',  // Replace with your email password
+    user: 'bhaveshrgarg@gmail.com', // Replace with email
+    pass: 'kklxsurjouwnproh',  // Replace with password
   },
 });
 
-// API route for sending email based on event
+
 app.post('/send-email', (req, res) => {
   const { email, eventName } = req.body;
 
@@ -35,7 +35,6 @@ app.post('/send-email', (req, res) => {
     return res.status(404).json({ message: 'Event not found' });
   }
 
-  // Set up email options
   const mailOptions = {
     from: 'bhaveshrgarg@gmail.com',
     to: email,
@@ -43,7 +42,7 @@ app.post('/send-email', (req, res) => {
     text: event.body,
   };
 
-  // Send the email
+=
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.log(error);
@@ -54,7 +53,6 @@ app.post('/send-email', (req, res) => {
   });
 });
 
-// Start the server
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
