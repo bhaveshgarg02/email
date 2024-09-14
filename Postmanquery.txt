@@ -1,0 +1,7 @@
+{
+  "recipients": [
+    { "email": "bhaveshrgarg@gmail.com", "eventName": "signup" },
+    { "email": "bhaveshrgarg@gmail.com", "eventName": "reminder" },
+    { "email": "bhaveshrgarg@gmail.com", "eventName": "specialOffer" }
+  ]
+}
