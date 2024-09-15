@@ -42,7 +42,7 @@ app.post('/send-email', (req, res) => {
     text: event.body,
   };
 
-=
+
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.log(error);
